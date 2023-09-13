@@ -1,0 +1,47 @@
+---
+layout: post
+title:  "My porfolio"
+date:   2023-09-13 00:00:00 -0000
+categories: [blog]
+---
+
+# Profil
+
+<ul>
+<li>Développeur Full Stack</li>
+<li>Fort engagement personnel de parvenir aux plus hauts niveaux de professionnelle</li>
+<li>Baccalauréat, AEC TI, plus de 10 ans d'expérience en comptabilité et en informatique</li>
+<li>Motivé, dynamique et créatif</li>
+<li>Français, Anglais</li> 
+</ul>
+
+# Formation
+ 
+<li><strong>Comptabilité</strong>: Université de McGill, Montréal, 2006-2009</li>
+<li><strong>Programmation en technologies Web</strong>: Cégep Gérald-Godin, Montréal, 2022-2023</li>
+
+
+# Expérience 
+       
+### Comptable, Développeur web
+
+<strong>Regent Textile Machinery Canada Lté</strong> 2020 - Present
+
+<ul>
+<li>Tenu de livres, rapports comptables</li>
+<li>Développement web, Gestion de TI</li> 
+</ul>
+
+# Capacité et Compétences
+
+<ul>
+    <li>Front end: React.js/Next.js, Vue.js/Nuxt3.js, AngularJS/Angular</li>
+    <li>CSS: CSS3, SASS, Bootstrap, Tailwind, XML</li> 
+    <li>APIs: REST APIs, GraphQL APIs</li>
+    <li>DB: MSSQL server, MySQL/MariaDB/PostgresSQL, MongoDB/mongoose</li>
+    <li>Cloud: AMS, Google cloud, Microsoft Azure  </li>
+    <li>C#, Java, Javascript/TypeScript, JQuery, PHP, Python, Go, Ruby etc.</li>
+    <li>Framework: ASP.NET, Laravel, Spring MVC, Django, Rails etc.</li>
+    <li>CMS: Wordpress, Joomla ! et Drupal10</li>
+    <li>Git, Jira, Confluence et Taiga et Docker</li> 
+</ul>
