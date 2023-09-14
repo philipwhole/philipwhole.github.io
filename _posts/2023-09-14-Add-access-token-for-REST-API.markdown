@@ -34,7 +34,7 @@ I have created a node.js project to generate Rest APIs and it works well. Now I 
 Now, let's test it. I used to test REST APIs in postman, which always worked very well. But today I want try another tool: <a href="https://testfully.io/">Testfully.</a>
 
 1. Signup if you do not have an account, then login.
-2. In the Requests interface, fill in the token credential.
+2. In the Requests interface, fill in the token credential required in Headers.
     name: Authorization, value: ghp_*****************************// Replace with your own preset API token, without quotation.
 3. Continue the requests and send. 
 
