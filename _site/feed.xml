@@ -1,4 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-13T18:18:19-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">The Web Dev Diaries - My Journey as a Web Developer.</title><subtitle>Welcome to my site, where I share my diaries as a web developer. Here you will find stories, insights, and tips from my personal and professional journey as a web developer. Whether you are a beginner, an experienced developer, or just curious about web development, you will find something interesting and useful here. I write about various topics related to web development, such as coding, design, tools, trends, challenges, and achievements. I also share my opinions, thoughts, and feelings about web development and how it affects my life. My goal is to inspire, inform, and entertain you with my diaries as a web developer. I hope you enjoy reading them as much as I enjoy writing them. Thank you for visiting my site! 😊</subtitle><entry><title type="html">My porfolio</title><link href="http://localhost:4000/blog/2023/09/12/profolio.html" rel="alternate" type="text/html" title="My porfolio" /><published>2023-09-12T20:00:00-04:00</published><updated>2023-09-12T20:00:00-04:00</updated><id>http://localhost:4000/blog/2023/09/12/profolio</id><content type="html" xml:base="http://localhost:4000/blog/2023/09/12/profolio.html"><![CDATA[<h1 id="profil">Profil</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-14T10:52:12-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">The Web Dev Diaries - My Journey as a Web Developer.</title><subtitle>Welcome to my site, where I share my diaries as a web developer. Here you will find stories, insights, and tips from my personal and professional journey as a web developer. Whether you are a beginner, an experienced developer, or just curious about web development, you will find something interesting and useful here. I write about various topics related to web development, such as coding, design, tools, trends, challenges, and achievements. I also share my opinions, thoughts, and feelings about web development and how it affects my life. My goal is to inspire, inform, and entertain you with my diaries as a web developer. I hope you enjoy reading them as much as I enjoy writing them. Thank you for visiting my site! 😊</subtitle><entry><title type="html">Add access token for REST API</title><link href="http://localhost:4000/blog/tutorial/2023/09/13/Add-access-token-for-REST-API.html" rel="alternate" type="text/html" title="Add access token for REST API" /><published>2023-09-13T20:00:00-04:00</published><updated>2023-09-13T20:00:00-04:00</updated><id>http://localhost:4000/blog/tutorial/2023/09/13/Add-access-token-for-REST-API</id><content type="html" xml:base="http://localhost:4000/blog/tutorial/2023/09/13/Add-access-token-for-REST-API.html"><![CDATA[<h1 id="add-access-token-for-rest-api">Add access token for REST API</h1>
+
+<p>I have created a node.js project to generate Rest APIs and it works well. Now I want to add access token to secure the APIs. Here are my steps:</p>
+
+<p>// Middleware to check API token</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app.use((req, res, next) =&gt; {
+    const apiToken = req.headers.authorization;
+
+    if (!apiToken || !apiToken.startsWith('Bearer ')) {
+        // Authorization header is missing or doesn't start with 'Bearer '
+        return res.status(401).json({ error: 'Invalid authorization header' });
+    }
+
+    const token = apiToken.substring(7); // Remove 'Bearer ' prefix
+    const presetApiToken = 'ghp_*****************************'; // Replace with your own preset API token
+
+    if (token === presetApiToken) {
+        // API token is valid, proceed to the route
+        next();
+    } else {
+        // API token is invalid, return an error response
+        res.status(401).json({ error: 'Invalid API token' });
+    }
+}); 
+</code></pre></div></div>
+
+<p>Now, let’s test it. I used to test REST APIs in postman, which always worked very well. But today I want try another tool: <a href="https://testfully.io/">Testfully.</a></p>
+
+<ol>
+  <li>Signup if you do not have an account, then login.</li>
+  <li>In the Requests interface, fill in the token credential.
+ name: Authorization, value: ghp_<strong>**</strong><strong>**</strong><strong>**</strong><strong>**</strong>*****// Replace with your own preset API token, without quotation.</li>
+  <li>Continue the requests and send.</li>
+</ol>
+
+<h2 id="now-you-can-interact-with-your-apis-data-congratulations">Now you can interact with your APIs data. Congratulations!</h2>]]></content><author><name></name></author><category term="blog" /><category term="tutorial" /><summary type="html"><![CDATA[Add access token for REST API]]></summary></entry><entry><title type="html">Create my blog over Github</title><link href="http://localhost:4000/blog/tutorial/2023/09/12/Create-my-blog-over-Github.html" rel="alternate" type="text/html" title="Create my blog over Github" /><published>2023-09-12T20:00:00-04:00</published><updated>2023-09-12T20:00:00-04:00</updated><id>http://localhost:4000/blog/tutorial/2023/09/12/Create-my-blog-over-Github</id><content type="html" xml:base="http://localhost:4000/blog/tutorial/2023/09/12/Create-my-blog-over-Github.html"><![CDATA[<h1 id="general-guide-for-creating-a-github-blog-site">General guide for creating a GitHub Blog site:</h1>
+
+<ul>
+<li>Set Up/Sign in a GitHub Account(philipwhole)</li> 
+<li>Install <a href="https://www.ruby-lang.org/en/documentation/installation/">Ruby</a> and <a href="https://jekyllrb.com/docs/installation/">Jekyll</a></li>
+<li>Create a New GitHub Repository(philipwhole.github.io)</li>
+<li>Clone the Repository to local then, cd philipwhole.github.io</li>
+<li>Initialize Jekyll( jekyll new .)</li>
+<li>Customize the _config.yml file: blog title, description, author information etc.</li> 
+<li>Create Blog Posts: yyyy-mm-dd-title.md</li>
+<li>Test Locally: bundle exec jekyll serve</li>
+<li>Commit and Push Changes</li>
+<li>Set Up GitHub Pages</li>
+<li>Access the Blog: philipwhole.github.io</li> 
+</ul>
+
+<p>Tip: Write the blog content using <a href="https://www.markdownguide.org/basic-syntax/">Markdown syntax</a>.</p>
+
+<p><strong>Good luck in building your own GitHub blog site!</strong></p>]]></content><author><name></name></author><category term="blog" /><category term="tutorial" /><summary type="html"><![CDATA[General guide for creating a GitHub Blog site:]]></summary></entry><entry><title type="html">My porfolio</title><link href="http://localhost:4000/blog/2023/09/12/profolio.html" rel="alternate" type="text/html" title="My porfolio" /><published>2023-09-12T20:00:00-04:00</published><updated>2023-09-12T20:00:00-04:00</updated><id>http://localhost:4000/blog/2023/09/12/profolio</id><content type="html" xml:base="http://localhost:4000/blog/2023/09/12/profolio.html"><![CDATA[<h1 id="profil">Profil</h1>
 
 <ul>
 <li>Développeur Full Stack</li>
@@ -36,22 +90,4 @@
     <li>Framework: ASP.NET, Laravel, Spring MVC, Django, Rails etc.</li>
     <li>CMS: Wordpress, Joomla ! et Drupal10</li>
     <li>Git, Jira, Confluence et Taiga et Docker</li> 
-</ul>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[Profil]]></summary></entry><entry><title type="html">Create my blog over Github</title><link href="http://localhost:4000/blog/tutorial/2023/09/12/Create-my-blog-over-Github.html" rel="alternate" type="text/html" title="Create my blog over Github" /><published>2023-09-12T20:00:00-04:00</published><updated>2023-09-12T20:00:00-04:00</updated><id>http://localhost:4000/blog/tutorial/2023/09/12/Create-my-blog-over-Github</id><content type="html" xml:base="http://localhost:4000/blog/tutorial/2023/09/12/Create-my-blog-over-Github.html"><![CDATA[<h1 id="general-guide-for-creating-a-github-blog-site">General guide for creating a GitHub Blog site:</h1>
-
-<ul>
-<li>Set Up/Sign in a GitHub Account(philipwhole)</li> 
-<li>Install <a href="https://www.ruby-lang.org/en/documentation/installation/">Ruby</a> and <a href="https://jekyllrb.com/docs/installation/">Jekyll</a></li>
-<li>Create a New GitHub Repository(philipwhole.github.io)</li>
-<li>Clone the Repository to local then, cd philipwhole.github.io</li>
-<li>Initialize Jekyll( jekyll new .)</li>
-<li>Customize the _config.yml file: blog title, description, author information etc.</li> 
-<li>Create Blog Posts: yyyy-mm-dd-title.md</li>
-<li>Test Locally: bundle exec jekyll serve</li>
-<li>Commit and Push Changes</li>
-<li>Set Up GitHub Pages</li>
-<li>Access the Blog: philipwhole.github.io</li> 
-</ul>
-
-<p>Tip: Write the blog content using <a href="https://www.markdownguide.org/basic-syntax/">Markdown syntax</a>.</p>
-
-<p><strong>Good luck in building your own GitHub blog site!</strong></p>]]></content><author><name></name></author><category term="blog" /><category term="tutorial" /><summary type="html"><![CDATA[General guide for creating a GitHub Blog site:]]></summary></entry></feed>
+</ul>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[Profil]]></summary></entry></feed>
