@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-14T23:17:55-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">The Web Dev Diaries - My Journey as a Web Developer.</title><subtitle>Welcome to my site, where I share my diaries as a web developer. Here you will find stories, insights, and tips from my personal and professional journey as a web developer. Whether you are a beginner, an experienced developer, or just curious about web development, you will find something interesting and useful here. I write about various topics related to web development, such as coding, design, tools, trends, challenges, and achievements. I also share my opinions, thoughts, and feelings about web development and how it affects my life. My goal is to inspire, inform, and entertain you with my diaries as a web developer. I hope you enjoy reading them as much as I enjoy writing them. Thank you for visiting my site! 😊</subtitle><entry><title type="html">REST APIs with Mongodb</title><link href="http://localhost:4000/api/tutorial/2023/09/13/REST-API-With-Mongodb.html" rel="alternate" type="text/html" title="REST APIs with Mongodb" /><published>2023-09-13T20:00:00-04:00</published><updated>2023-09-13T20:00:00-04:00</updated><id>http://localhost:4000/api/tutorial/2023/09/13/REST-API-With-Mongodb</id><content type="html" xml:base="http://localhost:4000/api/tutorial/2023/09/13/REST-API-With-Mongodb.html"><![CDATA[<h1 id="build-rest-apis-with-mongodb">Build REST APIs with Mongodb</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-15T15:20:52-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">The Web Dev Diaries - My Journey as a Web Developer.</title><subtitle>Welcome to my site, where I share my diaries as a web developer. Here you will find stories, insights, and tips from my personal and professional journey as a web developer. Whether you are a beginner, an experienced developer, or just curious about web development, you will find something interesting and useful here. I write about various topics related to web development, such as coding, design, tools, trends, challenges, and achievements. I also share my opinions, thoughts, and feelings about web development and how it affects my life. My goal is to inspire, inform, and entertain you with my diaries as a web developer. I hope you enjoy reading them as much as I enjoy writing them. Thank you for visiting my site! 😊</subtitle><entry><title type="html">REST APIs with Mongodb</title><link href="http://localhost:4000/api/tutorial/2023/09/13/REST-API-With-Mongodb.html" rel="alternate" type="text/html" title="REST APIs with Mongodb" /><published>2023-09-13T20:00:00-04:00</published><updated>2023-09-13T20:00:00-04:00</updated><id>http://localhost:4000/api/tutorial/2023/09/13/REST-API-With-Mongodb</id><content type="html" xml:base="http://localhost:4000/api/tutorial/2023/09/13/REST-API-With-Mongodb.html"><![CDATA[<h1 id="build-rest-apis-with-mongodb">Build REST APIs with Mongodb</h1>
 
 <p>I built REST APIs with SQLDB connection, now I decide to challenge myself with Atlas mongodb.</p>
 
@@ -87,39 +87,41 @@ mongoose.connection.once(‘open’, () =&gt; {
 <p><strong>Good luck in building your own GitHub blog site!</strong></p>]]></content><author><name></name></author><category term="blog" /><category term="tutorial" /><summary type="html"><![CDATA[General guide for creating a GitHub Blog site:]]></summary></entry><entry><title type="html">My porfolio</title><link href="http://localhost:4000/blog/2023/09/12/profolio.html" rel="alternate" type="text/html" title="My porfolio" /><published>2023-09-12T20:00:00-04:00</published><updated>2023-09-12T20:00:00-04:00</updated><id>http://localhost:4000/blog/2023/09/12/profolio</id><content type="html" xml:base="http://localhost:4000/blog/2023/09/12/profolio.html"><![CDATA[<h1 id="profil">Profil</h1>
 
 <ul>
-<li>Développeur Full Stack</li>
-<li>Fort engagement personnel de parvenir aux plus hauts niveaux de professionnelle</li>
-<li>Baccalauréat, AEC TI, plus de 10 ans d'expérience en comptabilité et en informatique</li>
-<li>Motivé, dynamique et créatif</li>
-<li>Français, Anglais</li> 
+  <li>Développeur Full Stack</li>
+  <li>Fort engagement personnel de parvenir aux plus hauts niveaux de professionnelle</li>
+  <li>Baccalauréat, AEC TI, plus de 10 ans d’expérience en comptabilité et en informatique</li>
+  <li>Motivé, dynamique et créatif</li>
+  <li>Français, Anglais</li>
 </ul>
 
 <h1 id="formation">Formation</h1>
 
-<li><strong>Comptabilité</strong>: Université de McGill, Montréal, 2006-2009</li>
-<li><strong>Programmation en technologies Web</strong>: Cégep Gérald-Godin, Montréal, 2022-2023</li>
+<ul>
+  <li><strong>Comptabilité</strong>: Université de McGill, Montréal, 2006-2009</li>
+  <li><strong>Programmation en technologies Web</strong>: Cégep Gérald-Godin, Montréal, 2022-2023</li>
+</ul>
 
 <h1 id="expérience">Expérience</h1>
 
-<h3 id="comptable-développeur-web">Comptable, Développeur web</h3>
+<p>Comptable, Développeur web</p>
 
 <p><strong>Regent Textile Machinery Canada Lté</strong> 2020 - Present</p>
 
 <ul>
-<li>Tenu de livres, rapports comptables</li>
-<li>Développement web, Gestion de TI</li> 
+  <li>Tenu de livres, rapports comptables</li>
+  <li>Développement web, Gestion de TI</li>
 </ul>
 
 <h1 id="capacité-et-compétences">Capacité et Compétences</h1>
 
 <ul>
-    <li>Front end: React.js/Next.js, Vue.js/Nuxt3.js, AngularJS/Angular</li>
-    <li>CSS: CSS3, SASS, Bootstrap, Tailwind, XML</li> 
-    <li>APIs: REST APIs, GraphQL APIs</li>
-    <li>DB: MSSQL server, MySQL/MariaDB/PostgresSQL, MongoDB/mongoose</li>
-    <li>Cloud: AMS, Google cloud, Microsoft Azure  </li>
-    <li>C#, Java, Javascript/TypeScript, JQuery, PHP, Python, Go, Ruby etc.</li>
-    <li>Framework: ASP.NET, Laravel, Spring MVC, Django, Rails etc.</li>
-    <li>CMS: Wordpress, Joomla ! et Drupal10</li>
-    <li>Git, Jira, Confluence et Taiga et Docker</li> 
-</ul>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[Profil]]></summary></entry></feed>
+  <li>Front end: React.js/Next.js, Vue.js/Nuxt3.js, AngularJS/Angular</li>
+  <li>CSS: CSS3, SASS, Bootstrap, Tailwind, XML</li>
+  <li>APIs: REST APIs, GraphQL APIs</li>
+  <li>DB: MSSQL server, MySQL/MariaDB/PostgresSQL, MongoDB/mongoose</li>
+  <li>Cloud: AMS, Google cloud, Microsoft Azure.</li>
+  <li>C*, Java, Javascript/TypeScript, JQuery, PHP, Python, Go, Ruby etc.</li>
+  <li>Framework: ASP.NET, Laravel, Spring MVC, Django, Rails etc.</li>
+  <li>CMS: Wordpress, Joomla ! et Drupal10</li>
+  <li>Git, Jira, Confluence et Taiga et Docker</li>
+</ul>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[Profil Développeur Full Stack Fort engagement personnel de parvenir aux plus hauts niveaux de professionnelle Baccalauréat, AEC TI, plus de 10 ans d’expérience en comptabilité et en informatique Motivé, dynamique et créatif Français, Anglais Formation Comptabilité: Université de McGill, Montréal, 2006-2009 Programmation en technologies Web: Cégep Gérald-Godin, Montréal, 2022-2023]]></summary></entry></feed>
