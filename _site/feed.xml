@@ -1,4 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-14T21:04:58-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">The Web Dev Diaries - My Journey as a Web Developer.</title><subtitle>Welcome to my site, where I share my diaries as a web developer. Here you will find stories, insights, and tips from my personal and professional journey as a web developer. Whether you are a beginner, an experienced developer, or just curious about web development, you will find something interesting and useful here. I write about various topics related to web development, such as coding, design, tools, trends, challenges, and achievements. I also share my opinions, thoughts, and feelings about web development and how it affects my life. My goal is to inspire, inform, and entertain you with my diaries as a web developer. I hope you enjoy reading them as much as I enjoy writing them. Thank you for visiting my site! 😊</subtitle><entry><title type="html">Cypress</title><link href="http://localhost:4000/test/tutorial/2023/09/13/Cypress.html" rel="alternate" type="text/html" title="Cypress" /><published>2023-09-13T20:00:00-04:00</published><updated>2023-09-13T20:00:00-04:00</updated><id>http://localhost:4000/test/tutorial/2023/09/13/Cypress</id><content type="html" xml:base="http://localhost:4000/test/tutorial/2023/09/13/Cypress.html"><![CDATA[]]></content><author><name></name></author><category term="test" /><category term="tutorial" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Add access token for REST API</title><link href="http://localhost:4000/blog/tutorial/2023/09/13/Add-access-token-for-REST-API.html" rel="alternate" type="text/html" title="Add access token for REST API" /><published>2023-09-13T20:00:00-04:00</published><updated>2023-09-13T20:00:00-04:00</updated><id>http://localhost:4000/blog/tutorial/2023/09/13/Add-access-token-for-REST-API</id><content type="html" xml:base="http://localhost:4000/blog/tutorial/2023/09/13/Add-access-token-for-REST-API.html"><![CDATA[<h1 id="add-access-token-for-rest-api">Add access token for REST API</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-14T23:17:55-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">The Web Dev Diaries - My Journey as a Web Developer.</title><subtitle>Welcome to my site, where I share my diaries as a web developer. Here you will find stories, insights, and tips from my personal and professional journey as a web developer. Whether you are a beginner, an experienced developer, or just curious about web development, you will find something interesting and useful here. I write about various topics related to web development, such as coding, design, tools, trends, challenges, and achievements. I also share my opinions, thoughts, and feelings about web development and how it affects my life. My goal is to inspire, inform, and entertain you with my diaries as a web developer. I hope you enjoy reading them as much as I enjoy writing them. Thank you for visiting my site! 😊</subtitle><entry><title type="html">REST APIs with Mongodb</title><link href="http://localhost:4000/api/tutorial/2023/09/13/REST-API-With-Mongodb.html" rel="alternate" type="text/html" title="REST APIs with Mongodb" /><published>2023-09-13T20:00:00-04:00</published><updated>2023-09-13T20:00:00-04:00</updated><id>http://localhost:4000/api/tutorial/2023/09/13/REST-API-With-Mongodb</id><content type="html" xml:base="http://localhost:4000/api/tutorial/2023/09/13/REST-API-With-Mongodb.html"><![CDATA[<h1 id="build-rest-apis-with-mongodb">Build REST APIs with Mongodb</h1>
+
+<p>I built REST APIs with SQLDB connection, now I decide to challenge myself with Atlas mongodb.</p>
+
+<p>The final APIs were deployed on cyclic</p>
+
+<ul>
+  <li>
+    <p>https://node-serveur2.cyclic.cloud/getAllActors</p>
+  </li>
+  <li>
+    <p>https://node-serveur2.cyclic.cloud/getActor/:actor_id</p>
+  </li>
+  <li>
+    <p>https://node-serveur2.cyclic.cloud/getActor/addActor</p>
+  </li>
+  <li>
+    <p>https://node-serveur2.cyclic.cloud/updateActor/:actor_id</p>
+  </li>
+  <li>
+    <p>https://node-serveur2.cyclic.cloud/deleteActor/:actor_id</p>
+  </li>
+</ul>
+
+<p>Access token: ‘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’</p>
+
+<p>// Connect to your MongoDB database
+mongoose.connect(‘mongodb+srv://root:JoB0QY9yqosg2EIa@cluster0.na3ur4v.mongodb.net/cluster0’)
+mongoose.connection.once(‘open’, () =&gt; {
+    console.log(‘conneted to database’);
+});</p>
+
+<p>The complete code can be found at github: <em>https://github.com/houzhihuil/node_Serveur2</em></p>]]></content><author><name></name></author><category term="api" /><category term="tutorial" /><summary type="html"><![CDATA[Build REST APIs with Mongodb]]></summary></entry><entry><title type="html">Cypress</title><link href="http://localhost:4000/test/tutorial/2023/09/13/Cypress.html" rel="alternate" type="text/html" title="Cypress" /><published>2023-09-13T20:00:00-04:00</published><updated>2023-09-13T20:00:00-04:00</updated><id>http://localhost:4000/test/tutorial/2023/09/13/Cypress</id><content type="html" xml:base="http://localhost:4000/test/tutorial/2023/09/13/Cypress.html"><![CDATA[]]></content><author><name></name></author><category term="test" /><category term="tutorial" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Add access token for REST API</title><link href="http://localhost:4000/blog/tutorial/2023/09/13/Add-access-token-for-REST-API.html" rel="alternate" type="text/html" title="Add access token for REST API" /><published>2023-09-13T20:00:00-04:00</published><updated>2023-09-13T20:00:00-04:00</updated><id>http://localhost:4000/blog/tutorial/2023/09/13/Add-access-token-for-REST-API</id><content type="html" xml:base="http://localhost:4000/blog/tutorial/2023/09/13/Add-access-token-for-REST-API.html"><![CDATA[<h1 id="add-access-token-for-rest-api">Add access token for REST API</h1>
 
 <p>I have created a node.js project to generate Rest APIs and it works well. Now I want to add access token to secure the APIs. Here are my steps:</p>
 
