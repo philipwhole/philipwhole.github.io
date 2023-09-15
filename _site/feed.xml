@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-15T19:43:04-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">The Web Dev Diaries - My Journey as a Web Developer.</title><subtitle>Welcome to my site, where I share my diaries as a web developer. Here you will find stories, insights, and tips from my personal and professional journey as a web developer. Whether you are a beginner, an experienced developer, or just curious about web development, you will find something interesting and useful here. I write about various topics related to web development, such as coding, design, tools, trends, challenges, and achievements. I also share my opinions, thoughts, and feelings about web development and how it affects my life. My goal is to inspire, inform, and entertain you with my diaries as a web developer. I hope you enjoy reading them as much as I enjoy writing them. Thank you for visiting my site! 😊</subtitle><entry><title type="html">REST APIs with Json-server</title><link href="http://localhost:4000/api/tutorial/2023/09/14/REST-API-With-Json-Server.html" rel="alternate" type="text/html" title="REST APIs with Json-server" /><published>2023-09-14T20:00:00-04:00</published><updated>2023-09-14T20:00:00-04:00</updated><id>http://localhost:4000/api/tutorial/2023/09/14/REST-API-With-Json-Server</id><content type="html" xml:base="http://localhost:4000/api/tutorial/2023/09/14/REST-API-With-Json-Server.html"><![CDATA[<h1 id="build-rest-apis-with-json-server">Build REST APIs with Json-server</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-15T19:47:30-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">The Web Dev Diaries - My Journey as a Web Developer.</title><subtitle>Welcome to my site, where I share my diaries as a web developer. Here you will find stories, insights, and tips from my personal and professional journey as a web developer. Whether you are a beginner, an experienced developer, or just curious about web development, you will find something interesting and useful here. I write about various topics related to web development, such as coding, design, tools, trends, challenges, and achievements. I also share my opinions, thoughts, and feelings about web development and how it affects my life. My goal is to inspire, inform, and entertain you with my diaries as a web developer. I hope you enjoy reading them as much as I enjoy writing them. Thank you for visiting my site! 😊</subtitle><entry><title type="html">REST APIs with Json-server</title><link href="http://localhost:4000/api/tutorial/2023/09/14/REST-API-With-Json-Server.html" rel="alternate" type="text/html" title="REST APIs with Json-server" /><published>2023-09-14T20:00:00-04:00</published><updated>2023-09-14T20:00:00-04:00</updated><id>http://localhost:4000/api/tutorial/2023/09/14/REST-API-With-Json-Server</id><content type="html" xml:base="http://localhost:4000/api/tutorial/2023/09/14/REST-API-With-Json-Server.html"><![CDATA[<h1 id="build-rest-apis-with-json-server">Build REST APIs with Json-server</h1>
 
 <ul>
   <li>Create a project json-server2: npm init</li>
@@ -23,23 +23,16 @@
 
 <p>The final APIs were deployed on cyclic</p>
 
-<ul>
-  <li>
-    <p>https://node-serveur2.cyclic.cloud/getAllActors</p>
-  </li>
-  <li>
-    <p>https://node-serveur2.cyclic.cloud/getActor/:actor_id</p>
-  </li>
-  <li>
-    <p>https://node-serveur2.cyclic.cloud/getActor/addActor</p>
-  </li>
-  <li>
-    <p>https://node-serveur2.cyclic.cloud/updateActor/:actor_id</p>
-  </li>
-  <li>
-    <p>https://node-serveur2.cyclic.cloud/deleteActor/:actor_id</p>
-  </li>
-</ul>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    https://node-serveur2.cyclic.cloud/getAllActors
+
+    https://node-serveur2.cyclic.cloud/getActor/:actor_id
+
+    https://node-serveur2.cyclic.cloud/getActor/addActor
+
+    https://node-serveur2.cyclic.cloud/updateActor/:actor_id
+        
+    https://node-serveur2.cyclic.cloud/deleteActor/:actor_id
+</code></pre></div></div>
 
 <p>Access token: ‘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’</p>
 

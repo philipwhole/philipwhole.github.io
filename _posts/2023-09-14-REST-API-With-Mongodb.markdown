@@ -11,15 +11,15 @@ I built REST APIs with SQLDB connection, now I decide to challenge myself with A
 
 The final APIs were deployed on cyclic
  
-* https://node-serveur2.cyclic.cloud/getAllActors
+        https://node-serveur2.cyclic.cloud/getAllActors
 
-* https://node-serveur2.cyclic.cloud/getActor/:actor_id
+        https://node-serveur2.cyclic.cloud/getActor/:actor_id
 
-* https://node-serveur2.cyclic.cloud/getActor/addActor
+        https://node-serveur2.cyclic.cloud/getActor/addActor
 
-* https://node-serveur2.cyclic.cloud/updateActor/:actor_id
-    
-* https://node-serveur2.cyclic.cloud/deleteActor/:actor_id
+        https://node-serveur2.cyclic.cloud/updateActor/:actor_id
+            
+        https://node-serveur2.cyclic.cloud/deleteActor/:actor_id
 
 Access token: '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'
 
