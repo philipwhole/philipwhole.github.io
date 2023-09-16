@@ -28,16 +28,16 @@ Access token: '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'
         database:"philippehou_gestionproduit" 
     });
  
-con.connect(function(err){
-    if(err) throw err; 
-});
+    con.connect(function(err){
+        if(err) throw err; 
+    });
 
 The complete code can be found at github: *https://github.com/philip-whole/nodeserver*
 
 *Test:*
 
 to get all products:
-curl -X GET -H "Authorization: Bearer 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" https://nodeserver.cyclic.cloud/getAllProducts
+    curl -X GET -H "Authorization: Bearer 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" https://nodeserver.cyclic.cloud/getAllProducts
 
 to get a single product with id:
-curl -X GET -H "Authorization: Bearer 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" https://nodeserver.cyclic.cloud/getProduct/1
+    curl -X GET -H "Authorization: Bearer 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" https://nodeserver.cyclic.cloud/getProduct/1
