@@ -32,3 +32,11 @@ con.connect(function(err){
 });
 
 The complete code can be found at github: *https://github.com/philip-whole/nodeserver*
+
+*Test:*
+
+to get all products:
+curl -X GET -H "Authorization: Bearer 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" https://nodeserver.cyclic.cloud/getAllProducts
+
+to get a single product with id:
+curl -X GET -H "Authorization: Bearer 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" https://nodeserver.cyclic.cloud/getProduct/1
