@@ -7,7 +7,7 @@ categories: [api, tutorial]
 
 # Build REST APIs with Json-server
 
-* Create a project json-server2: npm init
+* Create a project json-server1: npm init
 * Install json-server package: npm install json-server
 * Add the following script to your package.json file:
 
@@ -21,4 +21,4 @@ categories: [api, tutorial]
 
 # This it! 
 
-Now you have your REST APIs over *https://json-server.cyclic.cloud/* 
+Now you have your REST APIs over *https://json-server1.cyclic.cloud/* 
