@@ -17,7 +17,7 @@ REST APIs were deployed on cyclic
             
         https://nodeserver.cyclic.cloud/deleteProduct/:id
 
-Access token: 'ghp_**************************bWZGK'
+Access token: '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'
 
 // Connect to your MySQL database
 const con= mysql.createConnection({

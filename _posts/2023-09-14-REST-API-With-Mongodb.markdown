@@ -21,7 +21,7 @@ The final APIs were deployed on cyclic
             
         https://node-serveur2.cyclic.cloud/deleteActor/:actor_id
 
-Access token: 'ghp_**************************bWZGK'
+Access token: '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'
 
 // Connect to your MongoDB database
 mongoose.connect('mongodb+srv://root:JoB0********************Ia@cluster0.na3ur4v.mongodb.net/cluster0')
