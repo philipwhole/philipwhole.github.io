@@ -1,7 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-15T19:47:30-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">The Web Dev Diaries - My Journey as a Web Developer.</title><subtitle>Welcome to my site, where I share my diaries as a web developer. Here you will find stories, insights, and tips from my personal and professional journey as a web developer. Whether you are a beginner, an experienced developer, or just curious about web development, you will find something interesting and useful here. I write about various topics related to web development, such as coding, design, tools, trends, challenges, and achievements. I also share my opinions, thoughts, and feelings about web development and how it affects my life. My goal is to inspire, inform, and entertain you with my diaries as a web developer. I hope you enjoy reading them as much as I enjoy writing them. Thank you for visiting my site! 😊</subtitle><entry><title type="html">REST APIs with Json-server</title><link href="http://localhost:4000/api/tutorial/2023/09/14/REST-API-With-Json-Server.html" rel="alternate" type="text/html" title="REST APIs with Json-server" /><published>2023-09-14T20:00:00-04:00</published><updated>2023-09-14T20:00:00-04:00</updated><id>http://localhost:4000/api/tutorial/2023/09/14/REST-API-With-Json-Server</id><content type="html" xml:base="http://localhost:4000/api/tutorial/2023/09/14/REST-API-With-Json-Server.html"><![CDATA[<h1 id="build-rest-apis-with-json-server">Build REST APIs with Json-server</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-16T15:02:28-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">The Web Dev Diaries - My Journey as a Web Developer.</title><subtitle>Welcome to my site, where I share my diaries as a web developer. Here you will find stories, insights, and tips from my personal and professional journey as a web developer. Whether you are a beginner, an experienced developer, or just curious about web development, you will find something interesting and useful here. I write about various topics related to web development, such as coding, design, tools, trends, challenges, and achievements. I also share my opinions, thoughts, and feelings about web development and how it affects my life. My goal is to inspire, inform, and entertain you with my diaries as a web developer. I hope you enjoy reading them as much as I enjoy writing them. Thank you for visiting my site! 😊</subtitle><entry><title type="html">REST APIs with MySQL</title><link href="http://localhost:4000/api/tutorial/2023/09/14/REST-API-With-MySQL.html" rel="alternate" type="text/html" title="REST APIs with MySQL" /><published>2023-09-14T20:00:00-04:00</published><updated>2023-09-14T20:00:00-04:00</updated><id>http://localhost:4000/api/tutorial/2023/09/14/REST-API-With-MySQL</id><content type="html" xml:base="http://localhost:4000/api/tutorial/2023/09/14/REST-API-With-MySQL.html"><![CDATA[<p>REST APIs were deployed on cyclic</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    https://nodeserver.cyclic.cloud/getAllProducts
+
+    https://nodeserver.cyclic.cloud/getProduct/:id
+
+    https://nodeserver.cyclic.cloud/createProduct
+
+    https://nodeserver.cyclic.cloud/updateProduct/:id
+        
+    https://nodeserver.cyclic.cloud/deleteProduct/:id
+</code></pre></div></div>
+
+<p>Access token: ‘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’</p>
+
+<p>// Connect to your MySQL database</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const con= mysql.createConnection({
+    host:"mysql-philippehou.alwaysdata.net", 
+    user: "289337_root",
+    password: "Tm3x-****************Mf",
+    database:"philippehou_gestionproduit" 
+});
+ 
+con.connect(function(err){
+    if(err) throw err; 
+});
+</code></pre></div></div>
+
+<p>The complete code can be found at github: <em>https://github.com/philip-whole/nodeserver</em></p>
+
+<p><em>Test:</em></p>
+
+<p>to get all products:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -X GET -H "Authorization: Bearer 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" https://nodeserver.cyclic.cloud/getAllProducts
+</code></pre></div></div>
+
+<p>to get a single product with id:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -X GET -H "Authorization: Bearer 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" https://nodeserver.cyclic.cloud/getProduct/1
+</code></pre></div></div>
+
+<p>to update a single product with id:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -X PUT \
+-H "Authorization: Bearer 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" \
+-d "description=Portatif Macbook Pro" \
+-d "image=portable2.jpg" \
+-d "prix=1950.95" \
+-d "details=MSI 15.6 po GF65 9SEXR-436p, Intel Core i7-9750H, 16GB RAM, 512GB SSD, Win10, Noir" \
+https://nodeserver.cyclic.cloud/updateProduct/1
+</code></pre></div></div>
+
+<p>to add a product:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -X POST \
+-H "Authorization: Bearer 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" \
+-d "description=Portatif Macbook Pro" \
+-d "image=portable3.jpg" \
+-d "prix=2950.95" \
+-d "details=MSI 15.6 po GF65 9SEXR-436p, Intel Core i7-9750H, 16GB RAM, 512GB SSD, Win10, Noir" \
+https://nodeserver.cyclic.cloud/createProduct
+</code></pre></div></div>
+
+<p>to delete a product:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -X DELETE -H "Authorization: Bearer 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" https://nodeserver.cyclic.cloud/deleteProduct/1
+</code></pre></div></div>
+
+<p>The complete code can be found at github: https://github.com/philip-whole/nodeserver</p>]]></content><author><name></name></author><category term="api" /><category term="tutorial" /><summary type="html"><![CDATA[REST APIs were deployed on cyclic https://nodeserver.cyclic.cloud/getAllProducts]]></summary></entry><entry><title type="html">REST APIs with Json-server</title><link href="http://localhost:4000/api/tutorial/2023/09/14/REST-API-With-Json-Server.html" rel="alternate" type="text/html" title="REST APIs with Json-server" /><published>2023-09-14T20:00:00-04:00</published><updated>2023-09-14T20:00:00-04:00</updated><id>http://localhost:4000/api/tutorial/2023/09/14/REST-API-With-Json-Server</id><content type="html" xml:base="http://localhost:4000/api/tutorial/2023/09/14/REST-API-With-Json-Server.html"><![CDATA[<h1 id="build-rest-apis-with-json-server">Build REST APIs with Json-server</h1>
 
 <ul>
-  <li>Create a project json-server2: npm init</li>
+  <li>Create a project json-server1: npm init</li>
   <li>Install json-server package: npm install json-server</li>
   <li>
     <p>Add the following script to your package.json file:</p>
@@ -17,7 +87,9 @@
 
 <h1 id="this-it">This it!</h1>
 
-<p>Now you have your REST APIs over <em>https://json-server.cyclic.cloud/</em></p>]]></content><author><name></name></author><category term="api" /><category term="tutorial" /><summary type="html"><![CDATA[Build REST APIs with Json-server]]></summary></entry><entry><title type="html">REST APIs with Mongodb</title><link href="http://localhost:4000/api/tutorial/2023/09/13/REST-API-With-Mongodb.html" rel="alternate" type="text/html" title="REST APIs with Mongodb" /><published>2023-09-13T20:00:00-04:00</published><updated>2023-09-13T20:00:00-04:00</updated><id>http://localhost:4000/api/tutorial/2023/09/13/REST-API-With-Mongodb</id><content type="html" xml:base="http://localhost:4000/api/tutorial/2023/09/13/REST-API-With-Mongodb.html"><![CDATA[<h1 id="build-rest-apis-with-mongodb">Build REST APIs with Mongodb</h1>
+<p>Now you have your REST APIs over <em>https://json-server1.cyclic.cloud/</em></p>
+
+<p>The complete code can be found at github: https://github.com/philipwhole/json-server</p>]]></content><author><name></name></author><category term="api" /><category term="tutorial" /><summary type="html"><![CDATA[Build REST APIs with Json-server]]></summary></entry><entry><title type="html">REST APIs with Mongodb</title><link href="http://localhost:4000/api/tutorial/2023/09/13/REST-API-With-Mongodb.html" rel="alternate" type="text/html" title="REST APIs with Mongodb" /><published>2023-09-13T20:00:00-04:00</published><updated>2023-09-13T20:00:00-04:00</updated><id>http://localhost:4000/api/tutorial/2023/09/13/REST-API-With-Mongodb</id><content type="html" xml:base="http://localhost:4000/api/tutorial/2023/09/13/REST-API-With-Mongodb.html"><![CDATA[<h1 id="build-rest-apis-with-mongodb">Build REST APIs with Mongodb</h1>
 
 <p>I built REST APIs with SQLDB connection, now I decide to challenge myself with Atlas mongodb.</p>
 
@@ -37,12 +109,12 @@
 <p>Access token: ‘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’</p>
 
 <p>// Connect to your MongoDB database
-mongoose.connect(‘mongodb+srv://root:JoB0QY9yqosg2EIa@cluster0.na3ur4v.mongodb.net/cluster0’)
+mongoose.connect(‘mongodb+srv://root:JoB0<strong>**</strong><strong>**</strong><strong>**</strong>**Ia@cluster0.na3ur4v.mongodb.net/cluster0’)
 mongoose.connection.once(‘open’, () =&gt; {
     console.log(‘conneted to database’);
 });</p>
 
-<p>The complete code can be found at github: <em>https://github.com/houzhihuil/node_Serveur2</em></p>]]></content><author><name></name></author><category term="api" /><category term="tutorial" /><summary type="html"><![CDATA[Build REST APIs with Mongodb]]></summary></entry><entry><title type="html">Cypress</title><link href="http://localhost:4000/test/tutorial/2023/09/13/Cypress.html" rel="alternate" type="text/html" title="Cypress" /><published>2023-09-13T20:00:00-04:00</published><updated>2023-09-13T20:00:00-04:00</updated><id>http://localhost:4000/test/tutorial/2023/09/13/Cypress</id><content type="html" xml:base="http://localhost:4000/test/tutorial/2023/09/13/Cypress.html"><![CDATA[]]></content><author><name></name></author><category term="test" /><category term="tutorial" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Add access token for REST API</title><link href="http://localhost:4000/blog/tutorial/2023/09/13/Add-access-token-for-REST-API.html" rel="alternate" type="text/html" title="Add access token for REST API" /><published>2023-09-13T20:00:00-04:00</published><updated>2023-09-13T20:00:00-04:00</updated><id>http://localhost:4000/blog/tutorial/2023/09/13/Add-access-token-for-REST-API</id><content type="html" xml:base="http://localhost:4000/blog/tutorial/2023/09/13/Add-access-token-for-REST-API.html"><![CDATA[<h1 id="add-access-token-for-rest-api">Add access token for REST API</h1>
+<p>The complete code can be found at github: <em>https://github.com/houzhihuil/node_Serveur2</em></p>]]></content><author><name></name></author><category term="api" /><category term="tutorial" /><summary type="html"><![CDATA[Build REST APIs with Mongodb]]></summary></entry><entry><title type="html">Add access token for REST API</title><link href="http://localhost:4000/blog/tutorial/2023/09/13/Add-access-token-for-REST-API.html" rel="alternate" type="text/html" title="Add access token for REST API" /><published>2023-09-13T20:00:00-04:00</published><updated>2023-09-13T20:00:00-04:00</updated><id>http://localhost:4000/blog/tutorial/2023/09/13/Add-access-token-for-REST-API</id><content type="html" xml:base="http://localhost:4000/blog/tutorial/2023/09/13/Add-access-token-for-REST-API.html"><![CDATA[<h1 id="add-access-token-for-rest-api">Add access token for REST API</h1>
 
 <p>I have created a node.js project to generate Rest APIs and it works well. Now I want to add access token to secure the APIs. Here are my steps:</p>
 
@@ -78,7 +150,7 @@ mongoose.connection.once(‘open’, () =&gt; {
   <li>Continue the requests and send.</li>
 </ol>
 
-<h2 id="now-you-can-interact-with-your-apis-data-congratulations">Now you can interact with your APIs data. Congratulations!</h2>]]></content><author><name></name></author><category term="blog" /><category term="tutorial" /><summary type="html"><![CDATA[Add access token for REST API]]></summary></entry><entry><title type="html">Create my blog over Github</title><link href="http://localhost:4000/blog/tutorial/2023/09/12/Create-my-blog-over-Github.html" rel="alternate" type="text/html" title="Create my blog over Github" /><published>2023-09-12T20:00:00-04:00</published><updated>2023-09-12T20:00:00-04:00</updated><id>http://localhost:4000/blog/tutorial/2023/09/12/Create-my-blog-over-Github</id><content type="html" xml:base="http://localhost:4000/blog/tutorial/2023/09/12/Create-my-blog-over-Github.html"><![CDATA[<h1 id="general-guide-for-creating-a-github-blog-site">General guide for creating a GitHub Blog site:</h1>
+<h2 id="now-you-can-interact-with-your-apis-data-congratulations">Now you can interact with your APIs data. Congratulations!</h2>]]></content><author><name></name></author><category term="blog" /><category term="tutorial" /><summary type="html"><![CDATA[Add access token for REST API]]></summary></entry><entry><title type="html">Cypress</title><link href="http://localhost:4000/test/tutorial/2023/09/13/Cypress.html" rel="alternate" type="text/html" title="Cypress" /><published>2023-09-13T20:00:00-04:00</published><updated>2023-09-13T20:00:00-04:00</updated><id>http://localhost:4000/test/tutorial/2023/09/13/Cypress</id><content type="html" xml:base="http://localhost:4000/test/tutorial/2023/09/13/Cypress.html"><![CDATA[]]></content><author><name></name></author><category term="test" /><category term="tutorial" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Create my blog over Github</title><link href="http://localhost:4000/blog/tutorial/2023/09/12/Create-my-blog-over-Github.html" rel="alternate" type="text/html" title="Create my blog over Github" /><published>2023-09-12T20:00:00-04:00</published><updated>2023-09-12T20:00:00-04:00</updated><id>http://localhost:4000/blog/tutorial/2023/09/12/Create-my-blog-over-Github</id><content type="html" xml:base="http://localhost:4000/blog/tutorial/2023/09/12/Create-my-blog-over-Github.html"><![CDATA[<h1 id="general-guide-for-creating-a-github-blog-site">General guide for creating a GitHub Blog site:</h1>
 
 <ul>
 <li>Set Up/Sign in a GitHub Account(philipwhole)</li> 
