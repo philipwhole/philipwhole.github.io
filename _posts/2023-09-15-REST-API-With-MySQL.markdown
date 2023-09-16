@@ -20,12 +20,13 @@ REST APIs were deployed on cyclic
 Access token: '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'
 
 // Connect to your MySQL database
-const con= mysql.createConnection({
-	host:"mysql-philippehou.alwaysdata.net", 
-	user: "289337_root",
-	password: "Tm3x-****************Mf",
-	database:"philippehou_gestionproduit" 
-});
+
+    const con= mysql.createConnection({
+        host:"mysql-philippehou.alwaysdata.net", 
+        user: "289337_root",
+        password: "Tm3x-****************Mf",
+        database:"philippehou_gestionproduit" 
+    });
  
 con.connect(function(err){
     if(err) throw err; 
