@@ -23,4 +23,4 @@ categories: [api, tutorial]
 
 Now you have your REST APIs over *https://json-server1.cyclic.cloud/* 
 
-The complete code can be found at github: https://github.com/philipwhole/json-server
+The complete code can be found at github: *https://github.com/philipwhole/json-server*

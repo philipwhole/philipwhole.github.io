@@ -3,21 +3,21 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>REST APIs with Json-server | The Web Dev Diaries - My Journey as a Web Developer.</title>
+<title>React with REST APIs (1) | The Web Dev Diaries - My Journey as a Web Developer.</title>
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="REST APIs with Json-server" />
+<meta property="og:title" content="React with REST APIs (1)" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Build REST APIs with Json-server" />
-<meta property="og:description" content="Build REST APIs with Json-server" />
-<link rel="canonical" href="http://localhost:4000/api/tutorial/2023/09/14/REST-API-With-Json-Server.html" />
-<meta property="og:url" content="http://localhost:4000/api/tutorial/2023/09/14/REST-API-With-Json-Server.html" />
+<meta name="description" content="React with mock APIs:" />
+<meta property="og:description" content="React with mock APIs:" />
+<link rel="canonical" href="http://localhost:4000/react/api/tutorial/2023/09/17/React-With-REST-APIs-(1).html" />
+<meta property="og:url" content="http://localhost:4000/react/api/tutorial/2023/09/17/React-With-REST-APIs-(1).html" />
 <meta property="og:site_name" content="The Web Dev Diaries - My Journey as a Web Developer." />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-09-14T20:00:00-04:00" />
+<meta property="article:published_time" content="2023-09-17T20:00:00-04:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="REST APIs with Json-server" />
+<meta property="twitter:title" content="React with REST APIs (1)" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-09-14T20:00:00-04:00","datePublished":"2023-09-14T20:00:00-04:00","description":"Build REST APIs with Json-server","headline":"REST APIs with Json-server","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/api/tutorial/2023/09/14/REST-API-With-Json-Server.html"},"url":"http://localhost:4000/api/tutorial/2023/09/14/REST-API-With-Json-Server.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-09-17T20:00:00-04:00","datePublished":"2023-09-17T20:00:00-04:00","description":"React with mock APIs:","headline":"React with REST APIs (1)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/react/api/tutorial/2023/09/17/React-With-REST-APIs-(1).html"},"url":"http://localhost:4000/react/api/tutorial/2023/09/17/React-With-REST-APIs-(1).html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="The Web Dev Diaries - My Journey as a Web Developer." /></head>
 <body><header class="site-header" role="banner">
@@ -40,37 +40,68 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">REST APIs with Json-server</h1>
+    <h1 class="post-title p-name" itemprop="name headline">React with REST APIs (1)</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="2023-09-14T20:00:00-04:00" itemprop="datePublished">Sep 14, 2023
+      <time class="dt-published" datetime="2023-09-17T20:00:00-04:00" itemprop="datePublished">Sep 17, 2023
       </time></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h1 id="build-rest-apis-with-json-server">Build REST APIs with Json-server</h1>
+    <h1 id="react-with-mock-apis">React with mock APIs:</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://64e7bf5db0fd9648b7904d83.mockapi.io/fakeData
+</code></pre></div></div>
+
+<h1 id="test">Test:</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://demo-react-nine-sigma.vercel.app/
+</code></pre></div></div>
 
 <ul>
-  <li>Create a project json-server1: npm init</li>
-  <li>Install json-server package: npm install json-server</li>
+  <li>Step 1: Install Create React App : npm install -g create-react-app</li>
+  <li>Step 2: Create a New React Project: npx create-react-app demo-react</li>
+  <li>Step 3: cd demo-react</li>
   <li>
-    <p>Add the following script to your package.json file:</p>
+    <p>Step 4: modify \src\app.js</p>
 
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "scripts": {
-      "start": "json-server --watch db.json",
-  ...   },
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  import './App.css'; 
+  import Create from './components/create';
+  import Read from './components/read';
+  import Update from './components/update'; 
+  import { BrowserRouter as Router, Routes,  Route} from 'react-router-dom'
+    
+
+  function App() { 
+  return ( 
+      &lt;&gt;  
+      &lt;Router&gt;
+          &lt;div className="main"&gt;
+              &lt;h2 className="main-header"&gt;React Crud Operations&lt;/h2&gt;
+              &lt;Routes&gt; 
+              &lt;Route index element={&lt;Read /&gt;} /&gt;
+              &lt;Route path='/create' element={&lt;Create /&gt;} /&gt;
+              &lt;Route path='/read' element={&lt;Read /&gt;} /&gt; 
+              &lt;Route path="/update/:_id" element={&lt;Update /&gt;} /&gt; 
+              &lt;/Routes&gt;
+          &lt;/div&gt;
+      &lt;/Router&gt;
+      &lt;/&gt;
+      ) 
+  }   
+
+  export default App;
 </code></pre></div>    </div>
   </li>
-  <li>include db.json in this repository</li>
-  <li>deploy to cylic.cloud</li>
+  <li>Step 5: add folder components, and add three files inside: create.js, read.
+js and update.js</li>
 </ul>
 
-<h1 id="this-it">This it!</h1>
+<h1 id="the-complete-code-can-be-referred-at-">The complete code can be referred at :</h1>
 
-<p>Now you have your REST APIs over <em>https://json-server1.cyclic.cloud/</em></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://github.com/houzhihuil/demo-react
+</code></pre></div></div>
 
-<p>The complete code can be found at github: <em>https://github.com/philipwhole/json-server</em></p>
-
-  </div><a class="u-url" href="/api/tutorial/2023/09/14/REST-API-With-Json-Server.html" hidden></a>
+  </div><a class="u-url" href="/react/api/tutorial/2023/09/17/React-With-REST-APIs-(1).html" hidden></a>
 </article>
 
       </div>

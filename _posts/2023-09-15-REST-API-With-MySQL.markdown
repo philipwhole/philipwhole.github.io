@@ -5,7 +5,7 @@ date:   2023-09-15 00:00:00 -0000
 categories: [api, tutorial]
 --- 
 
-REST APIs were deployed on cyclic
+# REST APIs were deployed on cyclic
  
         https://nodeserver.cyclic.cloud/getAllProducts
 
@@ -68,5 +68,5 @@ to delete a product:
 
     curl -X DELETE -H "Authorization: Bearer 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" https://nodeserver.cyclic.cloud/deleteProduct/1
 
-The complete code can be found at github: https://github.com/philip-whole/nodeserver
+The complete code can be found at github: *https://github.com/philip-whole/nodeserver*
 
