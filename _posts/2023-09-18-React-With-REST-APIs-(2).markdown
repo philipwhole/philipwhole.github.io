@@ -38,14 +38,18 @@ In react project, we use useFetch:
 
         export default useFetch;
 
-In the Read component, we first declair url and accessToken, then call useFetch(url, accessToken):
+In the Read component, we first install dotenv, then create a file named '.env', then add:
+
+        REACT_APP_ACCESS_TOKEN=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
+
+then declair url and call useFetch(url, accessToken):
 
         import React  from 'react'; 
         import useFetch from "./useFetch";
 
         export default function Read() { 
-            const url="https://nodeserver.cyclic.cloud/getAllProducts"; 
-            const accessToken = "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";
+            const url="https://nodeserver.cyclic.cloud/getAllProducts";
+            const accessToken = process.env.REACT_APP_ACCESS_TOKEN;
             const [data] = useFetch(url, accessToken);   
             
             return ( 

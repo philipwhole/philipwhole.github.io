@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-19T21:59:12-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">The Web Dev Diaries - My Journey as a Web Developer.</title><subtitle>Welcome to my site, where I share my diaries as a web developer. Here you will find stories, insights, and tips from my personal and professional journey as a web developer. Whether you are a beginner, an experienced developer, or just curious about web development, you will find something interesting and useful here. I write about various topics related to web development, such as coding, design, tools, trends, challenges, and achievements. I also share my opinions, thoughts, and feelings about web development and how it affects my life. My goal is to inspire, inform, and entertain you with my diaries as a web developer. I hope you enjoy reading them as much as I enjoy writing them. Thank you for visiting my site! 😊</subtitle><entry><title type="html">React with REST APIs (2)</title><link href="http://localhost:4000/react/api/tutorial/2023/09/18/React-With-REST-APIs-(2).html" rel="alternate" type="text/html" title="React with REST APIs (2)" /><published>2023-09-18T20:00:00-04:00</published><updated>2023-09-18T20:00:00-04:00</updated><id>http://localhost:4000/react/api/tutorial/2023/09/18/React-With-REST-APIs-(2)</id><content type="html" xml:base="http://localhost:4000/react/api/tutorial/2023/09/18/React-With-REST-APIs-(2).html"><![CDATA[<h1 id="react-with-rest-apis-mysql">React with REST APIs (MySQL)</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-19T22:38:52-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">The Web Dev Diaries - My Journey as a Web Developer.</title><subtitle>Welcome to my site, where I share my diaries as a web developer. Here you will find stories, insights, and tips from my personal and professional journey as a web developer. Whether you are a beginner, an experienced developer, or just curious about web development, you will find something interesting and useful here. I write about various topics related to web development, such as coding, design, tools, trends, challenges, and achievements. I also share my opinions, thoughts, and feelings about web development and how it affects my life. My goal is to inspire, inform, and entertain you with my diaries as a web developer. I hope you enjoy reading them as much as I enjoy writing them. Thank you for visiting my site! 😊</subtitle><entry><title type="html">React with REST APIs (2)</title><link href="http://localhost:4000/react/api/tutorial/2023/09/18/React-With-REST-APIs-(2).html" rel="alternate" type="text/html" title="React with REST APIs (2)" /><published>2023-09-18T20:00:00-04:00</published><updated>2023-09-18T20:00:00-04:00</updated><id>http://localhost:4000/react/api/tutorial/2023/09/18/React-With-REST-APIs-(2)</id><content type="html" xml:base="http://localhost:4000/react/api/tutorial/2023/09/18/React-With-REST-APIs-(2).html"><![CDATA[<h1 id="react-with-rest-apis-mysql">React with REST APIs (MySQL)</h1>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://nodeserver.cyclic.cloud/getAllProducts
 
@@ -34,14 +34,19 @@ https://nodeserver.cyclic.cloud/deleteProduct/:id
     export default useFetch;
 </code></pre></div></div>
 
-<p>In the Read component, we first declair url and accessToken, then call useFetch(url, accessToken):</p>
+<p>In the Read component, we first install dotenv, then create a file named ‘.env’, then add:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    REACT_APP_ACCESS_TOKEN=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
+</code></pre></div></div>
+
+<p>then declair url and call useFetch(url, accessToken):</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    import React  from 'react'; 
     import useFetch from "./useFetch";
 
     export default function Read() { 
-        const url="https://nodeserver.cyclic.cloud/getAllProducts"; 
-        const accessToken = "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";
+        const url="https://nodeserver.cyclic.cloud/getAllProducts";
+        const accessToken = process.env.REACT_APP_ACCESS_TOKEN;
         const [data] = useFetch(url, accessToken);   
         
         return ( 
