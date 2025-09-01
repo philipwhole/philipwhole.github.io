@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Comparison of file storage"
+title: "Comparison of files storage"
 date: 2025-09-01 14:30:00 -0400
 categories: blog
 ---
